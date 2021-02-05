@@ -12,6 +12,10 @@ mongoose.connect("mongodb://localhost:27017/todo-react").then(() => {
   console.log("Connected database at mongodb://localhost:27017/todo-react");
 });
 
+// mongoose.connect("mongodb+srv://dbUser:1234@cluster0.1ecpb.mongodb.net/todo-react?retryWrites=true&w=majority").then(() => {
+//   console.log("Connected database server...");
+// });
+
 app.use("/api", routes);
 
 app.get("/", (req, res) => {
