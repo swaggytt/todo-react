@@ -12,6 +12,7 @@ const Card = ({ onSubmit, mode, detail, onDelete, onEdit, onDone, unDone }) => {
     if (mode === "edit") {
       setTask(detail?.taskName);
       setTaskDate(detail?.taskDate);
+      setStateCalender(false);
     }
     // eslint-disable-next-line
   }, [detail]);

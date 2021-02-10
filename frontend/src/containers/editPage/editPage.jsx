@@ -19,6 +19,7 @@ const EditPage = () => {
       taskName,
       taskDate,
     });
+    history.push(`/`);
   }
 
   useEffect(() => {
@@ -27,7 +28,7 @@ const EditPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="edit-page">
       <h1>Edit</h1>
       <Card onSubmit={onSubmit} mode={"edit"} detail={task} />
     </div>
