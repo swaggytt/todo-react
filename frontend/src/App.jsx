@@ -5,6 +5,7 @@ import createPage from "./containers/createPage/createPage";
 import donePage from "./containers/donePage/donePage";
 import contactPage from "./containers/contactPage/contactPage";
 import Navbar from "./components/navbar";
+import editPage from "./containers/editPage/editPage";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <Route exact path="/create" component={createPage} />
           <Route exact path="/done" component={donePage} />
           <Route exact path="/contact" component={contactPage} />
+          <Route exact path="/edit/:id" component={editPage} />
+          <Route exact path="/done" component={donePage} />
         </Switch>
       </Router>
     </div>

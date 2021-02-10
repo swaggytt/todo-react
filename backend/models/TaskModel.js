@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const TaskSchema = mongoose.Schema({
   taskName: String,
-  isFinished: Boolean,
-  date: String,
+  isFinished: { type: Boolean, default: false },
+  taskDate: Date,
 });
 
 const TaskModel = mongoose.model("Task", TaskSchema);

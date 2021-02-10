@@ -1,10 +1,14 @@
 GET http://localhost:9000/api/tasks
 ###
-POST http://localhost:9000/api/task/add
+GET http://localhost:9000/api/tasks/todo
+###
+GET http://localhost:9000/api/tasks/done
+###
+POST http://localhost:9000/api/tasks
 Content-Type: application/json
 
 {
-    "taskName":"todo-2",
+    "taskName":"todo-3",
     "isFinished":false,
     "date":"20-01-2564"
 }

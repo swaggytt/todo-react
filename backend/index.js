@@ -6,11 +6,16 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors())
+app.use(cors());
 
-mongoose.connect("mongodb://localhost:27017/todo-react").then(() => {
-  console.log("Connected database at mongodb://localhost:27017/todo-react");
-});
+mongoose
+  .connect("mongodb://localhost:27017/todo-react", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("Connected database at mongodb://localhost:27017/todo-react");
+  });
 
 // mongoose.connect("mongodb+srv://dbUser:1234@cluster0.1ecpb.mongodb.net/todo-react?retryWrites=true&w=majority").then(() => {
 //   console.log("Connected database server...");
