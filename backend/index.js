@@ -8,6 +8,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+const PORT = process.env.PORT || 9000;
+
 mongoose
   .connect("mongodb://localhost:27017/todo-react", {
     useNewUrlParser: true,
@@ -27,6 +29,6 @@ app.get("/", (req, res) => {
   res.send("Hola");
 });
 
-app.listen(9000, () => {
+app.listen(PORT, () => {
   console.log("Start server at port 9000");
 });

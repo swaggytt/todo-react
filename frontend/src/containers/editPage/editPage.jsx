@@ -11,7 +11,6 @@ const EditPage = () => {
   async function fetchData() {
     const { data } = await axios.get(`http://localhost:9000/api/tasks/${id}`);
     setTask(data);
-    console.log(data);
   }
 
   async function onSubmit(taskName, taskDate) {
@@ -29,7 +28,7 @@ const EditPage = () => {
 
   return (
     <div className="edit-page">
-      <h1>Edit</h1>
+      <h1 style={{ textAlign: "center" }}>Edit</h1>
       <Card onSubmit={onSubmit} mode={"edit"} detail={task} />
     </div>
   );

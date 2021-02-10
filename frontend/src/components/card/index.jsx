@@ -18,18 +18,26 @@ const Card = ({ onSubmit, mode, detail, onDelete, onEdit, onDone, unDone }) => {
   }, [detail]);
 
   console.log(taskDate);
-  // console.log(mode)
+  console.log(mode);
 
   return (
     <>
       {mode === "default" || mode === "done" ? (
-        <div className="card">
+        <div className="card-do">
           <div className="content-2">
             <p>
               To do: <b>{detail.taskName}</b>
             </p>
             <p>
-              at: <b style={{ color: "gray" }}>{detail.taskDate}</b>
+              {/* at: <b style={{ color: "gray" }}>{detail.taskDate}</b> */}
+              at:{" "}
+              <b style={{ color: "gray" }}>
+                {new Date(detail.taskDate).toLocaleString("th-TH", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </b>
             </p>
           </div>
           {mode !== "done" && (

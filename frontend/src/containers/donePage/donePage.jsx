@@ -44,6 +44,7 @@ const DonePage = () => {
 
   return (
     <div>
+      <h1 style={{ textAlign: "center" }}>Done</h1>
       {tasks.map((task, i) => (
         <Card
           mode={"done"}

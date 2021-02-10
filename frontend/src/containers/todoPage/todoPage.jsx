@@ -36,6 +36,7 @@ const TodoPage = () => {
 
   return (
     <div>
+      <h1 style={{ textAlign: "center" }}>TO DO!</h1>
       {tasks.map((task, i) => (
         <Card
           mode={"default"}
