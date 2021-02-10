@@ -11,7 +11,8 @@ const Card = ({ onSubmit, mode, detail, onDelete, onEdit, onDone, unDone }) => {
   useEffect(() => {
     if (mode === "edit") {
       setTask(detail?.taskName);
-      setTaskDate(detail?.taskDate);
+      // setTaskDate(detail?.taskDate);
+      setTaskDate(new Date(detail?.taskDate));
       setStateCalender(false);
     }
     // eslint-disable-next-line
