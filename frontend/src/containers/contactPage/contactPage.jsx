@@ -12,13 +12,13 @@ const ContactPage = () => {
       <h1>TAE</h1>
       <p>COMPUTER ENGINEERING STUDENT</p>
       <div className="btn-link">
-        <a href="https://www.facebook.com/taetae2323" target="_blank">
+        <a href="https://www.facebook.com/taetae2323" rel="noreferrer" target="_blank">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a href="https://github.com/swaggytt" target="_blank">
+        <a href="https://github.com/swaggytt" rel="noreferrer" target="_blank">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://instagram.com/t_g9h" target="_blank">
+        <a href="https://instagram.com/t_g9h" rel="noreferrer" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
