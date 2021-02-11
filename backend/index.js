@@ -10,13 +10,15 @@ app.use(cors());
 
 const PORT = process.env.PORT || 9000;
 
+// mongodb+srv://dbUser:<password>@cluster0.1ecpb.mongodb.net/<dbname>?retryWrites=true&w=majority
+// mongodb://localhost:27017/todo-react
 mongoose
-  .connect("mongodb://localhost:27017/todo-react", {
+  .connect("mongodb+srv://dbUser:1234@cluster0.1ecpb.mongodb.net/todo-react?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("Connected database at mongodb://localhost:27017/todo-react");
+    console.log("Connected database...");
   });
 
 // mongoose.connect("mongodb+srv://dbUser:1234@cluster0.1ecpb.mongodb.net/todo-react?retryWrites=true&w=majority").then(() => {
