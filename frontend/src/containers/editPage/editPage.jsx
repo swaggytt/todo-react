@@ -9,12 +9,12 @@ const EditPage = () => {
   const [task, setTask] = useState([]);
 
   async function fetchData() {
-    const { data } = await axios.get(`http://localhost:9000/api/tasks/${id}`);
+    const { data } = await axios.get(`https://swaggy-todo.herokuapp.com/api/tasks/${id}`);
     setTask(data);
   }
 
   async function onSubmit(taskName, taskDate) {
-    await axios.patch(`http://localhost:9000/api/tasks/${id}`, {
+    await axios.patch(`https://swaggy-todo.herokuapp.com/api/tasks/${id}`, {
       taskName,
       taskDate,
     });

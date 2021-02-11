@@ -7,7 +7,7 @@ const DonePage = () => {
 
   async function fetchData() {
     try {
-      const { data } = await axios.get(`http://localhost:9000/api/tasks/done`);
+      const { data } = await axios.get(`https://swaggy-todo.herokuapp.com/api/tasks/done`);
 
       setTasks(data);
     } catch (err) {
@@ -21,7 +21,7 @@ const DonePage = () => {
 
   async function unDone(id) {
     try {
-      await axios.patch(`http://localhost:9000/api/tasks/${id}`, {
+      await axios.patch(`https://swaggy-todo.herokuapp.com/api/tasks/${id}`, {
         isFinished: false,
       });
       const newTasks = tasks.filter((task) => task._id !== id);
@@ -33,7 +33,7 @@ const DonePage = () => {
 
   async function onDelete(id) {
     try {
-      await axios.delete(`http://localhost:9000/api/tasks/${id}`);
+      await axios.delete(`https://swaggy-todo.herokuapp.com/api/tasks/${id}`);
 
       const newTasks = tasks.filter((task) => task._id !== id);
       setTasks(newTasks);

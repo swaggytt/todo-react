@@ -6,7 +6,7 @@ const CreatePage = () => {
   const history = useHistory();
 
   async function onSubmit(task, taskDate) {
-    await axios.post(`http://localhost:9000/api/tasks`, {
+    await axios.post(`https://swaggy-todo.herokuapp.com/api/tasks`, {
       taskName: task,
       taskDate: taskDate,
     });
